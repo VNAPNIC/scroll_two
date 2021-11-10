@@ -1,0 +1,4 @@
+#Wed Nov 10 10:07:38 ICT 2021
+base.0=D\:\\projects\\pom\\scroll_two\\example\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

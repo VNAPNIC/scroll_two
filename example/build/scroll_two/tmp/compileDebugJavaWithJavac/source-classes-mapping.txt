@@ -1,0 +1,2 @@
+com/nankai/scroll_two/BuildConfig.java
+ com.nankai.scroll_two.BuildConfig

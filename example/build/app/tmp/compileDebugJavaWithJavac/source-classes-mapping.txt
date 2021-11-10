@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/nankai/scroll_two_example/BuildConfig.java
+ com.nankai.scroll_two_example.BuildConfig

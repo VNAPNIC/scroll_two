@@ -3,19 +3,22 @@ import 'package:flutter/material.dart';
 typedef ChildBuilder = Widget Function(BuildContext context, int index);
 
 class ScrollTwoController<E> extends ChangeNotifier {
+  ScrollTwoController(List<E> values) {
+    _bottom.addAll(values);
+  }
+
   final List<E> _top = [];
   final List<E> _bottom = [];
 
-  get values => _top + _bottom;
+  List<E> get values => _top + _bottom;
 
   get top => _top;
 
   get bottom => _bottom;
 
-  clear(E data) {
+  clear() {
     _top.clear();
     _bottom.clear();
-    notifyListeners();
   }
 
   add(E data) {
@@ -25,7 +28,6 @@ class ScrollTwoController<E> extends ChangeNotifier {
 
   addAll(Iterable<E> iterable) {
     _bottom.addAll(iterable);
-    notifyListeners();
   }
 
   insert(int index, E data) {
@@ -39,7 +41,6 @@ class ScrollTwoController<E> extends ChangeNotifier {
       final caculationIndex = index - _top.length;
       _bottom.insert(caculationIndex, data);
     }
-    notifyListeners();
   }
 
   insertAll(int index, Iterable<E> iterable) {
@@ -53,7 +54,6 @@ class ScrollTwoController<E> extends ChangeNotifier {
       final caculationIndex = index - _top.length;
       _bottom.insertAll(caculationIndex, iterable);
     }
-    notifyListeners();
   }
 
   removeAt(int index) {
@@ -69,6 +69,9 @@ class ScrollTwoController<E> extends ChangeNotifier {
       final caculationIndex = index - _top.length;
       _bottom.removeAt(caculationIndex);
     }
+  }
+
+  update() {
     notifyListeners();
   }
 
@@ -111,10 +114,10 @@ class _ScrollTwoState<T> extends State<ScrollTwo<T>> {
   void initState() {
     scrollController = widget.scrollController;
     controller = widget.controller;
-    super.initState();
     controller.addListener(() {
       setState(() {});
     });
+    super.initState();
   }
 
   @override

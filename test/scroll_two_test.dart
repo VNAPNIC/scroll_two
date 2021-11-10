@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:scroll_two/scroll_two.dart';
 
 void main() {
-  late ScrollTwoController<int> controller = ScrollTwoController<int>();
+  late ScrollTwoController<int> controller = ScrollTwoController<int>([]);
 
   test('Add', () async {
     print('--------- Add ------------');

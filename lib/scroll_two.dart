@@ -3,67 +3,87 @@ import 'package:flutter/material.dart';
 typedef ChildBuilder = Widget Function(BuildContext context, int index);
 
 class ScrollTwoController<E> extends ChangeNotifier {
-  List<E> top = [];
-  List<E> bottom = [];
+  final List<E> _top = [];
+  final List<E> _bottom = [];
+
+  get values => _top + _bottom;
+
+  get top => _top;
+
+  get bottom => _bottom;
+
+  clear(E data) {
+    _top.clear();
+    _bottom.clear();
+    notifyListeners();
+  }
 
   add(E data) {
-    bottom.add(data);
+    _bottom.add(data);
     notifyListeners();
   }
 
   addAll(Iterable<E> iterable) {
-    bottom.addAll(iterable);
+    _bottom.addAll(iterable);
     notifyListeners();
   }
 
   insert(int index, E data) {
+    assert(index >= 0 && index <= (_top.length + _bottom.length));
+
     if (index == 0) {
-      print('{1}');
-      top.insert(index, data);
-    } else if (index < top.length) {
-      print('{2}');
-      top.insert(index, data);
+      _top.insert(index, data);
+    } else if (index < _top.length) {
+      _top.insert(index, data);
     } else {
-      final caculationIndex = index - top.length;
-      print('{4} $caculationIndex | $index | ${top.length}');
-      bottom.insert(caculationIndex, data);
+      final caculationIndex = index - _top.length;
+      _bottom.insert(caculationIndex, data);
     }
     notifyListeners();
   }
 
   insertAll(int index, Iterable<E> iterable) {
-    assert(index <= (top.length + bottom.length));
+    assert(index >= 0 && index <= (_top.length + _bottom.length));
 
     if (index == 0) {
-      print('{1}');
-      top.insertAll(index, iterable);
-    } else if (index < top.length) {
-      print('{2}');
-      top.insertAll(index, iterable);
+      _top.insertAll(index, iterable);
+    } else if (index < _top.length) {
+      _top.insertAll(index, iterable);
     } else {
-      final caculationIndex = index - top.length;
-      print('{4} $caculationIndex | $index | ${top.length}');
-      bottom.insertAll(caculationIndex, iterable);
+      final caculationIndex = index - _top.length;
+      _bottom.insertAll(caculationIndex, iterable);
     }
     notifyListeners();
   }
 
-  remove(int index) {
-    assert(index >=0 && index <= (top.length + bottom.length));
+  removeAt(int index) {
+    assert(index >= 0 && index < (_top.length + _bottom.length));
 
-    if (index == 0 && top.isNotEmpty) {
-      print('{1}');
-      top.removeAt(0);
-    } else if (index == 0 && top.isEmpty) {
-      bottom.removeAt(0);
-    }else if(index<=top.length){
-      top.removeAt(index);
-    }else{
-      final caculationIndex = index - top.length;
-      bottom.removeAt(caculationIndex);
+    if (index == 0 && _top.isNotEmpty) {
+      _top.removeAt(0);
+    } else if (index == 0 && _top.isEmpty) {
+      _bottom.removeAt(0);
+    } else if (index < _top.length) {
+      _top.removeAt(index);
+    } else {
+      final caculationIndex = index - _top.length;
+      _bottom.removeAt(caculationIndex);
     }
-
     notifyListeners();
+  }
+
+  E get(int index) {
+    assert(index >= 0 && index < (_top.length + _bottom.length));
+    if (index == 0 && _top.isNotEmpty) {
+      return _top[0];
+    } else if (index == 0 && _top.isEmpty) {
+      return _bottom[0];
+    } else if (index < _top.length) {
+      return _top[index];
+    } else {
+      final caculationIndex = index - _top.length;
+      return _bottom[caculationIndex];
+    }
   }
 }
 
@@ -72,7 +92,8 @@ class ScrollTwo<T> extends StatefulWidget {
   final ScrollTwoController<T> controller;
   final ScrollController scrollController;
 
-  const ScrollTwo(this.builder, {
+  const ScrollTwo(
+    this.builder, {
     required this.controller,
     required this.scrollController,
     Key? key,
@@ -106,19 +127,19 @@ class _ScrollTwoState<T> extends State<ScrollTwo<T>> {
       slivers: [
         SliverList(
           delegate: SliverChildBuilderDelegate(
-                (BuildContext context, int index) {
+            (BuildContext context, int index) {
               return widget.builder(context, index);
             },
-            childCount: controller.top.length,
+            childCount: controller._top.length,
           ),
         ),
         SliverList(
           key: centerKey,
           delegate: SliverChildBuilderDelegate(
-                (BuildContext context, int index) {
+            (BuildContext context, int index) {
               return widget.builder(context, index);
             },
-            childCount: controller.bottom.length,
+            childCount: controller._bottom.length,
           ),
         ),
       ],

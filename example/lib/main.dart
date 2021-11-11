@@ -17,6 +17,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   late ScrollTwoController scrollController;
   late DataController<int> controller;
+  int previous = 0;
+  int current = 0;
 
   @override
   void initState() {
@@ -29,6 +31,9 @@ class _MyAppState extends State<MyApp> {
 
     scrollController.addVisibilityDetector((int previous, int current) {
       print('-------> previous $previous | current $current');
+      this.previous = previous;
+      this.current = current;
+      setState(() {});
     });
     super.initState();
   }
@@ -38,90 +43,97 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: Row(
+            children: [
+              Text('previous: $previous current: $current'),
+            ],
+          ),
         ),
         body: Column(
           children: [
             Expanded(
-              child: ScrollTwo(
-                  (context, index) {
-                    Random random = Random();
-                    int min = 50, max = 150;
-                    double result = (min + random.nextInt(max - min)).toDouble();
-                    return Container(
-                      margin: const EdgeInsets.all(8),
-                      height: result,
-                      color: Colors.blue,
-                      child: Center(
-                        child: Text(
-                          'Index ${controller.values[index]}',
-                          style: const TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    );
-                  },
-                  controller: controller,
-                  scrollController: scrollController),
+              child: ScrollTwo((context, index) {
+                return Container(
+                  margin: const EdgeInsets.all(8),
+                  height: 50,
+                  color: Colors.blue,
+                  child: Center(
+                    child: Text(
+                      'Index ${controller.values[index]}',
+                      style: const TextStyle(color: Colors.white),
+                    ),
+                  ),
+                );
+              }, controller: controller, scrollController: scrollController),
             ),
-            Column(
-              children: [
-                Row(
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        controller.addAll(generateNewData());
-                        controller.update();
-                      },
-                      child: const Text('Add To bottom'),
-                    ),
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    ElevatedButton(
-                      onPressed: () {
-                        controller.insertAll(0, generateNewData());
-                        controller.update();
-                      },
-                      child: const Text('Add To top'),
-                    ),
-
-                    ElevatedButton(
-                      onPressed: () async {
-                        await controller.clear();
-                        controller.update();
-                      },
-                      child: const Text('Clear'),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    ElevatedButton(
-                      onPressed: () async {
-                        await scrollController.moveToMin(
-                          scrollController.position.minScrollExtent,
-                          duration: const Duration(seconds: 1),
-                          curve: Curves.ease,
-                        );
-                      },
-                      child: const Text('Scroll To top'),
-                    ),
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    ElevatedButton(
-                      onPressed: () async {
-                        await scrollController.moveToMax(
-                          scrollController.position.maxScrollExtent,
-                          duration: const Duration(seconds: 1),
-                          curve: Curves.ease,
-                        );
-                      },
-                      child: const Text('Scroll To bottom'),
-                    ),
-                  ],
-                )
-              ],
+            Container(
+              color: Colors.deepOrangeAccent,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          controller.addAll(generateNewData());
+                          controller.update();
+                        },
+                        child: const Text('Add To bottom'),
+                      ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          controller.insertAll(0, generateNewData());
+                          controller.update();
+                        },
+                        child: const Text('Add To top'),
+                      ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      ElevatedButton(
+                        onPressed: () async {
+                          await controller.clear();
+                          controller.update();
+                        },
+                        child: const Text('Clear'),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () async {
+                          await scrollController.moveToMin(
+                            scrollController.position.minScrollExtent,
+                            duration: const Duration(seconds: 1),
+                            curve: Curves.ease,
+                          );
+                        },
+                        child: const Text('Scroll To top'),
+                      ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      ElevatedButton(
+                        onPressed: () async {
+                          await scrollController.moveToMax(
+                            scrollController.position.maxScrollExtent,
+                            duration: const Duration(seconds: 1),
+                            curve: Curves.ease,
+                          );
+                        },
+                        child: const Text('Scroll To bottom'),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),
@@ -131,7 +143,7 @@ class _MyAppState extends State<MyApp> {
 
   List<int> generateNewData() {
     List<int> values = [];
-    final min = controller.values.length+1;
+    final min = controller.values.length + 1;
     for (int i = min; i < (min + 20); i++) {
       values.add(i);
     }

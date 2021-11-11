@@ -1,7 +1,8 @@
 name: scroll_two
 description: Flutter Solution for Keep scroll position in ListView when adding new item on the first  and check item position when scrolling, scroll to index.
 version: 0.0.1
-homepage:
+author: vn.apnic@gmail.com
+homepage: https://github.com/VNAPNIC/scroll_two
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

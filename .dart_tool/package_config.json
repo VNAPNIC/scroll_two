@@ -152,13 +152,19 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "visibility_detector",
+      "rootUri": "file:///D:/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/visibility_detector-0.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "scroll_two",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-11-10T03:05:37.981595Z",
+  "generated": "2021-11-11T04:08:34.984362Z",
   "generator": "pub",
   "generatorVersion": "2.14.3"
 }

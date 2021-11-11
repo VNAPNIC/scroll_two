@@ -1,9 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 typedef ChildBuilder = Widget Function(BuildContext context, int index);
+typedef IndexCallback = Function(int previous, int current);
 
-class ScrollTwoController<E> extends ChangeNotifier {
-  ScrollTwoController(List<E> values) {
+class ScrollTwoController extends ScrollController {
+  IndexCallback? _indexCallback;
+
+  ///Fixed too many items won't scroll to the top
+  Future<void> moveToMin(double offset,
+      {required Duration duration, required Curve curve}) async {
+    await animateTo(position.minScrollExtent, duration: duration, curve: curve);
+    await animateTo(position.minScrollExtent, duration: duration, curve: curve);
+  }
+
+  ///Fixed too many items won't scroll to the bottom
+  Future<void> moveToMax(double offset,
+      {required Duration duration, required Curve curve}) async {
+    await animateTo(position.maxScrollExtent, duration: duration, curve: curve);
+    await animateTo(position.maxScrollExtent, duration: duration, curve: curve);
+  }
+
+  addVisibilityDetector(IndexCallback? callback) {
+    _indexCallback = callback;
+  }
+}
+
+class DataController<E> extends ChangeNotifier {
+  DataController(List<E> values) {
     _bottom.addAll(values);
   }
 
@@ -92,8 +116,8 @@ class ScrollTwoController<E> extends ChangeNotifier {
 
 class ScrollTwo<T> extends StatefulWidget {
   final ChildBuilder builder;
-  final ScrollTwoController<T> controller;
-  final ScrollController scrollController;
+  final DataController<T> controller;
+  final ScrollTwoController scrollController;
 
   const ScrollTwo(
     this.builder, {
@@ -107,8 +131,10 @@ class ScrollTwo<T> extends StatefulWidget {
 }
 
 class _ScrollTwoState<T> extends State<ScrollTwo<T>> {
-  late ScrollController scrollController;
-  late ScrollTwoController<T> controller;
+  late ScrollTwoController scrollController;
+  late DataController<T> controller;
+  var previousPostion = 0;
+  var currentPostion = 0;
 
   @override
   void initState() {
@@ -131,8 +157,19 @@ class _ScrollTwoState<T> extends State<ScrollTwo<T>> {
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (BuildContext context, int index) {
-              return widget.builder(context, index);
+              final caculationCurrentIndex = controller._top.length - index;
+              return VisibilityDetector(
+                key: const Key('ScrollTwo'),
+                onVisibilityChanged: (visibilityInfo) {
+                  var visiblePercentage = visibilityInfo.visibleFraction * 100;
+                  if (visiblePercentage >= 1){
+                    indexCallback(caculationCurrentIndex);
+                  }
+                },
+                child: widget.builder(context, caculationCurrentIndex),
+              );
             },
+            semanticIndexCallback: (_, index) {},
             childCount: controller._top.length,
           ),
         ),
@@ -140,12 +177,33 @@ class _ScrollTwoState<T> extends State<ScrollTwo<T>> {
           key: centerKey,
           delegate: SliverChildBuilderDelegate(
             (BuildContext context, int index) {
-              return widget.builder(context, index);
+              final caculationCurrentIndex = controller._top.length + index;
+              return VisibilityDetector(
+                key: const Key('ScrollTwo'),
+                onVisibilityChanged: (visibilityInfo) {
+                  var visiblePercentage = visibilityInfo.visibleFraction * 100;
+                  if (visiblePercentage >= 1){
+                    indexCallback(caculationCurrentIndex);
+                  }
+                },
+                child: widget.builder(context, caculationCurrentIndex),
+              );
+            },
+            semanticIndexCallback: (widget, index) {
+              return index;
             },
             childCount: controller._bottom.length,
           ),
         ),
       ],
     );
+  }
+
+  indexCallback(index) {
+    currentPostion = index;
+    if (scrollController._indexCallback != null) {
+      scrollController._indexCallback!(previousPostion, currentPostion);
+    }
+    previousPostion = currentPostion;
   }
 }

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:scroll_two/scroll_two.dart';
 
@@ -13,17 +15,21 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late ScrollController scrollController;
-  late ScrollTwoController<int> controller;
+  late ScrollTwoController scrollController;
+  late DataController<int> controller;
 
   @override
   void initState() {
     List<int> values = [];
-    for (int i = 0; i < 40; i++) {
+    for (int i = 0; i < 20; i++) {
       values.add(i);
     }
-    scrollController = ScrollController();
-    controller = ScrollTwoController<int>(values);
+    scrollController = ScrollTwoController();
+    controller = DataController<int>(values);
+
+    scrollController.addVisibilityDetector((int previous, int current) {
+      print('-------> previous $previous | current $current');
+    });
     super.initState();
   }
 
@@ -38,17 +44,22 @@ class _MyAppState extends State<MyApp> {
           children: [
             Expanded(
               child: ScrollTwo(
-                  (context, index) => Container(
-                        margin: const EdgeInsets.all(8),
-                        height: 40,
-                        color: Colors.blue,
-                        child: Center(
-                          child: Text(
-                            'Index $index',
-                            style: const TextStyle(color: Colors.white),
-                          ),
+                  (context, index) {
+                    Random random = Random();
+                    int min = 50, max = 150;
+                    double result = (min + random.nextInt(max - min)).toDouble();
+                    return Container(
+                      margin: const EdgeInsets.all(8),
+                      height: result,
+                      color: Colors.blue,
+                      child: Center(
+                        child: Text(
+                          'Index ${controller.values[index]}',
+                          style: const TextStyle(color: Colors.white),
                         ),
                       ),
+                    );
+                  },
                   controller: controller,
                   scrollController: scrollController),
             ),
@@ -73,13 +84,21 @@ class _MyAppState extends State<MyApp> {
                       },
                       child: const Text('Add To top'),
                     ),
+
+                    ElevatedButton(
+                      onPressed: () async {
+                        await controller.clear();
+                        controller.update();
+                      },
+                      child: const Text('Clear'),
+                    ),
                   ],
                 ),
                 Row(
                   children: [
                     ElevatedButton(
-                      onPressed: () {
-                        scrollController.animateTo(
+                      onPressed: () async {
+                        await scrollController.moveToMin(
                           scrollController.position.minScrollExtent,
                           duration: const Duration(seconds: 1),
                           curve: Curves.ease,
@@ -91,14 +110,14 @@ class _MyAppState extends State<MyApp> {
                       width: 8,
                     ),
                     ElevatedButton(
-                      onPressed: () {
-                        scrollController.animateTo(
+                      onPressed: () async {
+                        await scrollController.moveToMax(
                           scrollController.position.maxScrollExtent,
                           duration: const Duration(seconds: 1),
                           curve: Curves.ease,
                         );
                       },
-                      child: Text('Scroll To bottom'),
+                      child: const Text('Scroll To bottom'),
                     ),
                   ],
                 )
@@ -112,7 +131,7 @@ class _MyAppState extends State<MyApp> {
 
   List<int> generateNewData() {
     List<int> values = [];
-    final min = controller.values.length;
+    final min = controller.values.length+1;
     for (int i = min; i < (min + 20); i++) {
       values.add(i);
     }

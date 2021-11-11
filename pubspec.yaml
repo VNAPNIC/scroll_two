@@ -1,5 +1,5 @@
 name: scroll_two
-description: A new flutter plugin project.
+description: Flutter Solution for Keep scroll position in ListView when adding new item on the first  and check item position when scrolling, scroll to index.
 version: 0.0.1
 homepage:
 
@@ -13,6 +13,7 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   visibility_detector: ^0.2.2
+  collection: any
 
 dev_dependencies:
   flutter_test:

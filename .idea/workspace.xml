@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="646ea5af-5ec1-47c2-bd67-3acbb9ad73a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/index.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scroll_two.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/scroll_two.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scroll_two_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/scroll_two_web.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scroll_two.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scroll_two.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/scroll_two.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/scroll_two.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/scroll_two_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/scroll_two_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +114,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636610209527</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="move package">
+      <created>1636610441448</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636610441448</updated>
+    </task>
+    <task id="LOCAL-00007" summary="move package">
+      <created>1636610486168</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1636610486168</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -143,7 +155,8 @@
     <MESSAGE value="update unittest" />
     <MESSAGE value="ui example" />
     <MESSAGE value="update example add Visibility detector" />
-    <option name="LAST_COMMIT_MESSAGE" value="update example add Visibility detector" />
+    <MESSAGE value="move package" />
+    <option name="LAST_COMMIT_MESSAGE" value="move package" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="D:\projects\pom\scroll_two\coverage\lcov.info" NAME="tests in scroll_two_test.dart Coverage Results" MODIFIED="1636525710163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="FlutterCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

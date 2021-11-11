@@ -1,10 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:scroll_two/scroll_two.dart';
-import 'package:collection/collection.dart';
 
 void main() {
   late DataController<int> controller = DataController<int>([]);
-  Function unOrdDeepEq = const DeepCollectionEquality.unordered().equals;
 
   test('Add', () async {
     print('--------- Add ------------');

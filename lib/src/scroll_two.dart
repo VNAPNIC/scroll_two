@@ -3,6 +3,8 @@ part of scroll_two;
 typedef ChildBuilder = Widget Function(BuildContext context, int index);
 typedef IndexCallback = Function(int previous, int current);
 
+Function unOrdDeepEq = const DeepCollectionEquality.unordered().equals;
+
 class ScrollTwoController extends ScrollController {
   IndexCallback? _indexCallback;
 

@@ -34,10 +34,6 @@ flutter_lints
 2.12
 file:///D:/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/
 file:///D:/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/lib/
-js
-2.12
-file:///D:/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3/
-file:///D:/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3/lib/
 lints
 2.12
 file:///D:/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1/
@@ -102,10 +98,6 @@ flutter_test
 2.12
 file:///D:/SDK/flutter/packages/flutter_test/
 file:///D:/SDK/flutter/packages/flutter_test/lib/
-flutter_web_plugins
-2.12
-file:///D:/SDK/flutter/packages/flutter_web_plugins/
-file:///D:/SDK/flutter/packages/flutter_web_plugins/lib/
 scroll_two
 2.12
 file:///D:/projects/pom/scroll_two/

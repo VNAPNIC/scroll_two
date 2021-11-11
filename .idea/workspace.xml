@@ -10,8 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="646ea5af-5ec1-47c2-bd67-3acbb9ad73a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/screenshots/Screenshot_1636611481.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +149,35 @@
       <option name="project" value="LOCAL" />
       <updated>1636611526822</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixed This package does not have collection in the `dependencies` section of `pubspec.yaml">
+      <created>1636611756002</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1636611756002</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update readme">
+      <created>1636611809352</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1636611809352</updated>
+    </task>
+    <task id="LOCAL-00012" summary="upgrade version collection">
+      <created>1636611869560</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1636611869560</updated>
+    </task>
+    <task id="LOCAL-00013" summary="upgrade version collection">
+      <created>1636611875524</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1636611875524</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -177,7 +206,9 @@
     <MESSAGE value="update example add Visibility detector" />
     <MESSAGE value="move package" />
     <MESSAGE value="fixed This package does not have collection in the `dependencies` section of `pubspec.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed This package does not have collection in the `dependencies` section of `pubspec.yaml" />
+    <MESSAGE value="update readme" />
+    <MESSAGE value="upgrade version collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade version collection" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="D:\projects\pom\scroll_two\coverage\lcov.info" NAME="tests in scroll_two_test.dart Coverage Results" MODIFIED="1636525710163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="FlutterCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

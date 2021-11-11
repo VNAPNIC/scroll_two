@@ -9,28 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="646ea5af-5ec1-47c2-bd67-3acbb9ad73a8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/flutter_build/14afe43922d893f6cce366697a28a700/.filecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/flutter_build/14afe43922d893f6cce366697a28a700/app.dill" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/flutter_build/14afe43922d893f6cce366697a28a700/debug_android_application.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/flutter_build/14afe43922d893f6cce366697a28a700/flutter_assets.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/flutter_build/14afe43922d893f6cce366697a28a700/gen_dart_plugin_registrant.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/flutter_build/14afe43922d893f6cce366697a28a700/gen_localizations.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/flutter_build/14afe43922d893f6cce366697a28a700/kernel_snapshot.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/flutter_build/14afe43922d893f6cce366697a28a700/kernel_snapshot.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/flutter_build/14afe43922d893f6cce366697a28a700/outputs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/package_config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/package_config_subset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.dart_tool/version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/example/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/local.properties" afterDir="false" />
-    </list>
+    <list default="true" id="646ea5af-5ec1-47c2-bd67-3acbb9ad73a8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,7 +201,28 @@
       <option name="project" value="LOCAL" />
       <updated>1636612590370</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="remove author in the pubspec.yaml">
+      <created>1636613174422</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1636613174422</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update README.md">
+      <created>1636613351711</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1636613351711</updated>
+    </task>
+    <task id="LOCAL-00020" summary="update README.md">
+      <created>1636613377487</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1636613377487</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -257,7 +257,8 @@
     <MESSAGE value="supoort web plugins" />
     <MESSAGE value="update pubspec.yaml" />
     <MESSAGE value="remove author in the pubspec.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove author in the pubspec.yaml" />
+    <MESSAGE value="update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="D:\projects\pom\scroll_two\coverage\lcov.info" NAME="tests in scroll_two_test.dart Coverage Results" MODIFIED="1636525710163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="FlutterCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

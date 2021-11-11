@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="646ea5af-5ec1-47c2-bd67-3acbb9ad73a8" name="Default Changelist" comment="" />
+    <list default="true" id="646ea5af-5ec1-47c2-bd67-3acbb9ad73a8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/index.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scroll_two.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/scroll_two.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scroll_two_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/scroll_two_web.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/scroll_two_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/scroll_two_test.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\pom\scroll_two\lib\src" />
       <recent name="D:\projects\pom\scroll_two\lib" />
     </key>
   </component>
@@ -101,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636607100699</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update example add Visibility detector">
+      <created>1636610209527</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636610209527</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">

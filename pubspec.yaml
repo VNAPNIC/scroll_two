@@ -13,7 +13,7 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   visibility_detector: ^0.2.2
-  collection: any
+  collection: ^1.15.0
 
 dev_dependencies:
   flutter_test:

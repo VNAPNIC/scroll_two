@@ -1,6 +1,6 @@
 name: scroll_two
 description: Flutter Solution for keep scroll position in ListView when adding new item on top. Detect item position when scrolling.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/VNAPNIC/scroll_two
 
 environment:

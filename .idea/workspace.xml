@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="646ea5af-5ec1-47c2-bd67-3acbb9ad73a8" name="Default Changelist" comment="" />
+    <list default="true" id="646ea5af-5ec1-47c2-bd67-3acbb9ad73a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scroll_two.iml" beforeDir="false" afterPath="$PROJECT_DIR$/scroll_two.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -229,7 +233,28 @@
       <option name="project" value="LOCAL" />
       <updated>1636613897792</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update README.md">
+      <created>1636613956697</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1636613956697</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update README.md">
+      <created>1636613962986</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1636613962986</updated>
+    </task>
+    <task id="LOCAL-00024" summary="upgrade version">
+      <created>1636614004979</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1636614004979</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -265,7 +290,8 @@
     <MESSAGE value="update pubspec.yaml" />
     <MESSAGE value="remove author in the pubspec.yaml" />
     <MESSAGE value="update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <MESSAGE value="upgrade version" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade version" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="D:\projects\pom\scroll_two\coverage\lcov.info" NAME="tests in scroll_two_test.dart Coverage Results" MODIFIED="1636525710163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="FlutterCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

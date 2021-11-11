@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:scroll_two/scroll_two.dart';
 
@@ -30,7 +28,6 @@ class _MyAppState extends State<MyApp> {
     controller = DataController<int>(values);
 
     scrollController.addVisibilityDetector((int previous, int current) {
-      print('-------> previous $previous | current $current');
       this.previous = previous;
       this.current = current;
       setState(() {});

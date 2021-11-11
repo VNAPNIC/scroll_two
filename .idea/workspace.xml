@@ -10,7 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="646ea5af-5ec1-47c2-bd67-3acbb9ad73a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/example/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/example/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/example/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/web/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/example/web/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/web/icons/Icon-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/example/web/icons/Icon-192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/web/icons/Icon-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/example/web/icons/Icon-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/web/icons/Icon-maskable-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/example/web/icons/Icon-maskable-192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/web/icons/Icon-maskable-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/example/web/icons/Icon-maskable-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scroll_two.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scroll_two.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/scroll_two_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scroll_two_web.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -61,8 +75,8 @@
       <recent name="D:\projects\pom\scroll_two\screen" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\pom\scroll_two\lib\src" />
       <recent name="D:\projects\pom\scroll_two\lib" />
+      <recent name="D:\projects\pom\scroll_two\lib\src" />
     </key>
   </component>
   <component name="RunManager" selected="Flutter.example/lib/main.dart">
@@ -177,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636611875524</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="unsupoort web plugins">
+      <created>1636611964987</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1636611964987</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -208,7 +229,8 @@
     <MESSAGE value="fixed This package does not have collection in the `dependencies` section of `pubspec.yaml" />
     <MESSAGE value="update readme" />
     <MESSAGE value="upgrade version collection" />
-    <option name="LAST_COMMIT_MESSAGE" value="upgrade version collection" />
+    <MESSAGE value="unsupoort web plugins" />
+    <option name="LAST_COMMIT_MESSAGE" value="unsupoort web plugins" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="D:\projects\pom\scroll_two\coverage\lcov.info" NAME="tests in scroll_two_test.dart Coverage Results" MODIFIED="1636525710163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="FlutterCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

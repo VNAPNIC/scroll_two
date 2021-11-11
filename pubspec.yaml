@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
   visibility_detector: ^0.2.2
   collection: ^1.15.0
 
@@ -34,6 +36,9 @@ flutter:
         pluginClass: ScrollTwoPlugin
       ios:
         pluginClass: ScrollTwoPlugin
+      web:
+        pluginClass: ScrollTwoWeb
+        fileName: scroll_two_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

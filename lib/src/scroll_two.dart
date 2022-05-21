@@ -158,12 +158,15 @@ class _ScrollTwoState<T> extends State<ScrollTwo<T>> {
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (BuildContext context, int index) {
-              final caculationCurrentIndex = controller._top.length - index;
+              final caculationCurrentIndex = controller.values.length -
+                  controller._bottom.length -
+                  index -
+                  1;
               return VisibilityDetector(
                 key: const Key('ScrollTwo'),
                 onVisibilityChanged: (visibilityInfo) {
                   var visiblePercentage = visibilityInfo.visibleFraction * 100;
-                  if (visiblePercentage >= 1){
+                  if (visiblePercentage >= 1) {
                     indexCallback(caculationCurrentIndex);
                   }
                 },
@@ -183,7 +186,7 @@ class _ScrollTwoState<T> extends State<ScrollTwo<T>> {
                 key: const Key('ScrollTwo'),
                 onVisibilityChanged: (visibilityInfo) {
                   var visiblePercentage = visibilityInfo.visibleFraction * 100;
-                  if (visiblePercentage >= 1){
+                  if (visiblePercentage >= 1) {
                     indexCallback(caculationCurrentIndex);
                   }
                 },
